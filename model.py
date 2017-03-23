@@ -1,12 +1,16 @@
 import db
+from datetime import datetime
 
 
 class Message:
 
-    def __init__(self, sender, content, date):
+    def __init__(self, sender, content, date=None):
         self.sender = sender
         self.content = content
-        self.date = date
+        if not date:
+            self.date = str(datetime.now())
+        else:
+            self.date = date
 
     def save(self):
         query = 'INSERT INTO `messages` (`sender`, `content`, `date`) VALUES (?, ?, ?)'

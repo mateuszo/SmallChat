@@ -12,7 +12,11 @@ def hello():
 @app.route("/messages", methods=['GET', 'POST'])
 def messages():
     if request.method == 'POST':
-        return "POST"
+        sender = request.get_json()['sender']
+        content = request.get_json()['content']
+        m = Message(sender, content)
+        m.save()
+        return jsonify(m.__dict__), 201
     else:
         return jsonify([m.__dict__ for m in Message.get_all()])
 
