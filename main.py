@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 import db
 from model import Message
 app = Flask(__name__)
@@ -14,7 +14,7 @@ def messages():
     if request.method == 'POST':
         return "POST"
     else:
-        return "GET"
+        return jsonify([m.__dict__ for m in Message.get_all()])
 
 
 @app.teardown_appcontext
@@ -31,4 +31,4 @@ def initdb_command():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
