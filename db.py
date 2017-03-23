@@ -11,6 +11,14 @@ def get_db():
     return g.db
 
 
+def execute(query, params):
+    db = get_db()
+    c = db.cursor()
+    result = c.execute(query, params)
+    db.commit()
+    return result
+
+
 def close_db():
     """Closes the database."""
     if hasattr(g, 'db'):
