@@ -1,4 +1,4 @@
-CREATE TABLE todos (
+CREATE TABLE messages (
 id INTEGER PRIMARY KEY AUTOINCREMENT,
 sender TEXT,
 content TEXT,
