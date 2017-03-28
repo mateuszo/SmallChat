@@ -1,0 +1,8 @@
+dd {
+  margin-bottom: 15px;
+}
+
+.well {
+  height: 60vh;
+  overflow: scroll;
+}
