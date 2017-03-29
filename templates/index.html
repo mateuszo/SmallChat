@@ -6,39 +6,18 @@
 {% block content %}
     <h1>Welcome to SmallChat</h1>
     <div class="well">
-      <dl class="dl-horizontal">
-        <dt>Mateusz</dt>
-        <dd>message1</dd>
-        <dt>Michał</dt>
-        <dd>message2</dd>
-        <dt>Cicero</dt>
-        <dd>
-          Bibendum ultricies amet cras dolor sagittis mi suspendisse nisi cum neque elementum a magnis velit ad rutrum nulla a a quis pharetra consectetur. A fames vel ullamcorper a odio cursus adipiscing a nam nisi parturient nulla justo ante pretium ligula a ac consectetur iaculis cras a cum luctus. Dui nam a eros metus a cursus primis ad felis lacinia habitasse gravida facilisis sit blandit lacus vestibulum orci suspendisse a et a a scelerisque.
-
-          Parturient a viverra ullamcorper faucibus aptent adipiscing neque adipiscing malesuada a eleifend iaculis accumsan placerat eu nam ridiculus potenti posuere elit fames eu sapien lectus vestibulum neque nibh penatibus. Ullamcorper a scelerisque duis tristique nullam vivamus ullamcorper ullamcorper vel aliquam suspendisse dapibus natoque dui suspendisse pretium condimentum lacinia eu neque curabitur faucibus accumsan inceptos. Condimentum a dolor ac id volutpat volutpat taciti fermentum montes ullamcorper tincidunt lobortis a inceptos ac nullam torquent porttitor suspendisse dignissim mollis ad mi erat vestibulum. Id non consectetur quam dui venenatis curabitur suspendisse vestibulum vulputate consectetur vestibulum adipiscing fringilla lacus natoque turpis.
-        </dd>
-        <dt>Mateusz</dt>
-        <dd>WTF?!</dd>
-        <dt>Cicero</dt>
-        <dd>
-          Bibendum ultricies amet cras dolor sagittis mi suspendisse nisi cum neque elementum a magnis velit ad rutrum nulla a a quis pharetra consectetur. A fames vel ullamcorper a odio cursus adipiscing a nam nisi parturient nulla justo ante pretium ligula a ac consectetur iaculis cras a cum luctus. Dui nam a eros metus a cursus primis ad felis lacinia habitasse gravida facilisis sit blandit lacus vestibulum orci suspendisse a et a a scelerisque.
-
-          Parturient a viverra ullamcorper faucibus aptent adipiscing neque adipiscing malesuada a eleifend iaculis accumsan placerat eu nam ridiculus potenti posuere elit fames eu sapien lectus vestibulum neque nibh penatibus. Ullamcorper a scelerisque duis tristique nullam vivamus ullamcorper ullamcorper vel aliquam suspendisse dapibus natoque dui suspendisse pretium condimentum lacinia eu neque curabitur faucibus accumsan inceptos. Condimentum a dolor ac id volutpat volutpat taciti fermentum montes ullamcorper tincidunt lobortis a inceptos ac nullam torquent porttitor suspendisse dignissim mollis ad mi erat vestibulum. Id non consectetur quam dui venenatis curabitur suspendisse vestibulum vulputate consectetur vestibulum adipiscing fringilla lacus natoque turpis.
-        </dd>
-        <dt>Hamlet</dt>
-        <dd>
-          To be, or not to be? That is the question—
-          Whether ’tis nobler in the mind to suffer
-          The slings and arrows of outrageous fortune,
-          Or to take arms against a sea of troubles,
-          And, by opposing, end them? To die, to sleep—
-          No more—and by a sleep to say we end
-          The heartache and the thousand natural shocks
-          That flesh is heir to—’tis a consummation
-          Devoutly to be wished! To die, to sleep.
-        </dd>
+      <dl id="message-list" class="dl-horizontal">
+        Loading...
       </dl>
     </div>
+    <script id="template" type="x-tmpl-mustache">
+      {% raw %}
+        {{#messages}}
+            <dt>{{sender}}</dt>
+            <dd>{{content}}</dd>
+        {{/messages}}
+      {% endraw %}
+    </script>
 
 
     <form class="form-horizontal">
