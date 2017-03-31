@@ -29,18 +29,18 @@ flask run
 ```
 
 ## Built with
-* Python 3
-* Flask
-* sqlite3
-* Bootsrap 3
-* jquery
-* mustache.js
+* [Python 3](https://www.python.org/)
+* [Flask](http://flask.pocoo.org/)
+* [sqlite3](https://www.sqlite.org/)
+* [Bootsrap 3](http://getbootstrap.com/)
+* [jquery](https://jquery.com/)
+* [mustache.js](http://mustache.github.io/)
 
 
 ## Learning
 
 ### Dojo
-Check the dojo branch that was developed durning coding dojo @ Codecool.
+Check the [Dojo branch](https://github.com/mateuszo/SmallChat/tree/dojo) that was developed durning coding dojo @ Codecool.
 
 ### Try to DIY
 The best way to learn is to develop such application by yourself. Here you'll find list of tasks that will help you do it.
@@ -58,4 +58,4 @@ Front-end:
 - [ ] Write JavaScript code that will retrieve messages from database using AJAX.
 - [ ] Implement displaying retrieved messages.
 - [ ] Make message retrieval and display run periodically
-- [ ] Write JavaScript that will POST messages to the database. Use AJAX again 
+- [ ] Write JavaScript that will POST messages to the database. Use AJAX again
